@@ -81,7 +81,7 @@ async def help(_,message):
         [InlineKeyboardButton(text=i, callback_data=f"help_{i}")] for i in HELP
     ]
 
-    await message.reply_text(f"Hello **{message.from_user.first_name}**, I'm **@ToxicBeatRobot**.\nI'm Here to download your music.\n\n🏅**@Mr_Hops** ",
+    await message.reply_text(f"Hello **{message.from_user.first_name}**, I'm **@ToxicBeatRobot**.\nI'm Here to download your music.Restart /start \n\n🏅**@Mr_Hops** ",
                         reply_markup=InlineKeyboardMarkup(button))
 
 @Mbot.on_callback_query(filters.regex(r"help_(.*?)"))
@@ -96,5 +96,5 @@ async def help_home(_,query):
     button = [
         [InlineKeyboardButton(text=i, callback_data=f"help_{i}")] for i in HELP
     ]
-    await query.message.edit(f"Hello **{query.from_user.first_name}**, I'm **@ToxicBeatRobot**.\nI'm Here to download your music.\n\n🏅**@Mr_Hops**",
+    await query.message.edit(f"Hello **{query.from_user.first_name}**, I'm **@ToxicBeatRobot**.\nI'm Here to download your music.Restart /start \n\n🏅**@Mr_Hops**",
                         reply_markup=InlineKeyboardMarkup(button))

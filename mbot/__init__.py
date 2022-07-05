@@ -49,7 +49,7 @@ SUDO_USERS = environ.get("SUDO_USERS",str(OWNER_ID)).split()
 SUDO_USERS = [int(_x) for _x in SUDO_USERS]
 if OWNER_ID not in SUDO_USERS:
     SUDO_USERS.append(OWNER_ID)
-AUTH_CHATS = environ.get('AUTH_CHATS','-1001576243355').split()
+AUTH_CHATS = environ.get('AUTH_CHATS','-1001198673851').split()
 AUTH_CHATS = [int(_x) for _x in AUTH_CHATS]
 LOG_GROUP = environ.get("LOG_GROUP", None)
 if LOG_GROUP:
@@ -74,7 +74,7 @@ class Mbot(Client):
         if not path.exists('/tmp/thumbnails/'):
             mkdir('/tmp/thumbnails/')
         for chat in AUTH_CHATS:
-            await self.send_photo(chat,"https://i.ibb.co/mtGCrzm/youNeedMusic.jpg","**Bot Started.**")
+            await self.send_photo(chat,"https://i.ibb.co/s6x0LHR/images-62.jpg","**Bot Started.**")
         LOGGER.info(f"Bot Started As {BOT_INFO.username}\n")
     
     async def stop(self,*args):

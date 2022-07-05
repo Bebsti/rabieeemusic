@@ -69,14 +69,9 @@ async def ping(client,message):
     await message.reply_text(f"**Pong!**\nResponse time: `{ms} ms`")
 
 HELP = {
-     "⭑⭑★✪ HELP info: ✪★⭑⭑"
-    
-    "-----------------"
+
     "Youtube": "Send **Youtube** Link in Chat to Download Song.",
-    "Spotify": "Send **Spotify** Track/Playlist/Album/Show/Episode's Link. I'll Download It For You.",
-    "-----------------"
-  
-    "<b>🏅<a href='https://t.me/Mr_Hops'>@𝝣𝙈𝙋𝙐𝙍𝘼𝙉 🗡</a></b>","<b>🔰<a href='https://t.me/sykids_SQL'>@Spykids</a></b>"
+    "Spotify": "Send **Spotify** Track/Playlist/Album/Show/Episode's Link. I'll Download It For You."
 }
 
 

@@ -46,10 +46,10 @@ async def _(_,message):
         randomdir = "/tmp/"+str(randint(1,100000000))
         mkdir(randomdir)
         for id in ids:
-            PForCopy = await message.reply_photo(f"https://i.ytimg.com/vi/{id[0]}/hqdefault.jpg",caption=f"🎧 Title : **{id[3]}**\n🎤 Artist : `{id[2]}`\n\n **@malayalam_audiobook**")
+            PForCopy = await message.reply_photo(f"https://i.ytimg.com/vi/{id[0]}/hqdefault.jpg",caption=f" **{id[3]}**\n\n **@malayalam_audiobook**")
             fileLink = await ytdl_down(audio_opt(randomdir,id[2]),id[0])
             thumnail = await thumb_down(id[0])
-            AForCopy = await message.reply_audio(fileLink,caption=f"[{id[3]}](https://youtu.be/{id[0]}) - {id[2]}",title=id[3].replace("_"," "),performer=id[2],thumb=thumnail,duration=id[4])
+            AForCopy = await message.reply_audio(fileLink,caption=f"**{id[3]}** \n\n**@malayalam_audiobook**",title=id[3].replace("_"," "),performer=id[2],thumb=thumnail,duration=id[4])
             if LOG_GROUP:
                 await PForCopy.copy(LOG_GROUP)
                 await AForCopy.copy(LOG_GROUP)

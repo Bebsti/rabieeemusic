@@ -68,7 +68,6 @@ async def ping(client,message):
 HELP = {
 
     "Youtube": "Send **Youtube** Link in Chat to Download Song.",
-    "Spotify": "Send **Spotify** Track/Playlist/Album/Show/Episode's Link. I'll Download It For You."
 }
 
 

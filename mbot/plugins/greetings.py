@@ -31,13 +31,9 @@ from os import execvp,sys
 @Mbot.on_message(filters.command("start"))
 async def start(client,message):
     reply_markup = [[
-        InlineKeyboardButton(
-            text="Malayalam Audiobook 🎧", url="https://t.me/malayalam_audiobook"),
-        InlineKeyboardButton(text="Help 🛰",callback_data="helphome")
-        ],
-        [
-            InlineKeyboardButton(text="Sponsers 🌐",
-            url="https://t.me/Drago_Mafia"),
+        InlineKeyboardButton(text="സഹായം",callback_data="helphome"),
+        InlineKeyboardButton(text="സ്പോൺസർ",
+            url="https://t.me/Drago_Mafia")
         ]]
     if LOG_GROUP:
 

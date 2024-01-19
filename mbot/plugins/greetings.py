@@ -32,20 +32,17 @@ from os import execvp,sys
 async def start(client,message):
     reply_markup = [[
         InlineKeyboardButton(
-            text="𝗧𝗢𝗫𝗜𝗖 𝗕𝝣𝝠𝗧𝗦 🎧", url="https://t.me/toxicbeats"),
-        InlineKeyboardButton(
-            text="𝝣𝙈𝙋𝙐𝙍𝘼𝙉 🗡",
-            url="https://t.me/Mr_Hops"),
-        InlineKeyboardButton(text="𝙃𝝣𝙇𝙋 🛰",callback_data="helphome")
+            text="Malayalam Audiobook 🎧", url="https://t.me/malayalam_audiobook"),
+        InlineKeyboardButton(text="Help 🛰",callback_data="helphome")
         ],
         [
-            InlineKeyboardButton(text="𝙋𝙍𝙊𝙑𝙄𝘿𝝣𝙍𝗦 🌐",
-            url="https://t.me/Spykids_SQL"),
+            InlineKeyboardButton(text="Sponsers 🌐",
+            url="https://t.me/Drago_Mafia"),
         ]]
     if LOG_GROUP:
 
         invite_link = await client.create_chat_invite_link(chat_id=(int(LOG_GROUP) if str(LOG_GROUP).startswith("-100") else LOG_GROUP))
-        reply_markup.append([InlineKeyboardButton("𝓛𝓞𝓖 𝓑𝓞𝓞𝓚 📓", url=invite_link.invite_link)])
+        reply_markup.append([InlineKeyboardButton("Malayalam Audiobook 📓", url=invite_link.invite_link)])
     if message.chat.type != "private" and message.chat.id not in AUTH_CHATS and message.from_user.id not in SUDO_USERS:
         return await message.reply_text("𝘛𝘩𝘪𝘴 𝘉𝘰𝘵 𝘞𝘪𝘭𝘭 𝘕𝘰𝘵 𝘞𝘰𝘳𝘬 𝘐𝘯 𝘎𝘳𝘰𝘶𝘱𝘴 𝘜𝘯𝘭𝘦𝘴𝘴 𝘐𝘵'𝘴 𝘈𝘶𝘵𝘩𝘰𝘳𝘪𝘻𝘦𝘥.",
                     reply_markup=InlineKeyboardMarkup(reply_markup))
@@ -81,7 +78,7 @@ async def help(_,message):
         [InlineKeyboardButton(text=i, callback_data=f"help_{i}")] for i in HELP
     ]
 
-    await message.reply_text(f"Hello **{message.from_user.first_name}**, I'm **@ToxicBeatRobot**.\nI'm Here to download your music.Restart /start \n\n🏅**@Mr_Hops** ",
+    await message.reply_text(f"Hello **{message.from_user.first_name}**, I'm **@mp3uploader_bot**.\nI'm Here to download your music.Restart /start \n\n🏅**@signature_98** ",
                         reply_markup=InlineKeyboardMarkup(button))
 
 @Mbot.on_callback_query(filters.regex(r"help_(.*?)"))
@@ -96,5 +93,5 @@ async def help_home(_,query):
     button = [
         [InlineKeyboardButton(text=i, callback_data=f"help_{i}")] for i in HELP
     ]
-    await query.message.edit(f"Hello **{query.from_user.first_name}**, I'm **@ToxicBeatRobot**.\nI'm Here to download your music.Restart /start \n\n🏅**@Mr_Hops**",
+    await query.message.edit(f"Hello **{query.from_user.first_name}**, I'm **@mp3uploader_bot**.\nI'm Here to download your music.Restart /start \n\n🏅**@signature_98**",
                         reply_markup=InlineKeyboardMarkup(button))

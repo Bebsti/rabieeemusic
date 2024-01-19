@@ -63,7 +63,7 @@ async def ping(client,message):
 
 HELP = {
 
-    "Youtube": "Send **Youtube** Link in Chat to Download Song.",
+    "Youtube": "**ചാറ്റിൽ ഒരു കഥയുടെ യൂട്യൂബ് ലിങ്ക് അയക്കു**",
 }
 
 
@@ -73,7 +73,7 @@ async def help(_,message):
         [InlineKeyboardButton(text=i, callback_data=f"help_{i}")] for i in HELP
     ]
 
-    await message.reply_text(f"Hello **{message.from_user.first_name}**, I'm **@mp3uploader_bot**.\nI'm Here to download your music.Restart /start \n\n🏅**@signature_98** ",
+    await message.reply_text(f"**കഥകളുടെ യൂട്യൂബ് ലിങ്കുകൾ അയച്ചു തരു..**\n **കീ:** /start \n\n🏅**@signature_98** ",
                         reply_markup=InlineKeyboardMarkup(button))
 
 @Mbot.on_callback_query(filters.regex(r"help_(.*?)"))

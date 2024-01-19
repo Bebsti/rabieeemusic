@@ -38,7 +38,7 @@ async def start(client,message):
     if LOG_GROUP:
 
         invite_link = await client.create_chat_invite_link(chat_id=(int(LOG_GROUP) if str(LOG_GROUP).startswith("-100") else LOG_GROUP))
-        reply_markup.append([InlineKeyboardButton("Malayalam Audiobook 📓", url=invite_link.invite_link)])
+        reply_markup.append([InlineKeyboardButton("ഓഡിയോ ബുക്ക്‌ 📓", url=invite_link.invite_link)])
     if message.chat.type != "private" and message.chat.id not in AUTH_CHATS and message.from_user.id not in SUDO_USERS:
         return await message.reply_text("**നിങ്ങൾക്കിഷ്ടപ്പെട്ട കഥകളുടെ യൂട്യൂബ് ലിങ്കുകൾ എനിക്കയച്ചു തരു,ഞാൻ അവ ഓഡിയോ ക്ലിപ്പുകളായി നൽകാം** 😊.\n\n `ഓഡിയോകൾ` **@malayalam_audiobook** `എന്ന ചാനലിൽ.`",
                     reply_markup=InlineKeyboardMarkup(reply_markup))

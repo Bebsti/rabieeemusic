@@ -88,5 +88,5 @@ async def help_home(_,query):
     button = [
         [InlineKeyboardButton(text=i, callback_data=f"help_{i}")] for i in HELP
     ]
-    await query.message.edit(f"**കഥകളുടെ യൂട്യൂബ് ലിങ്കുകൾ അയച്ചു തരു..**\n **കീ:** /start \n\n🏅**@signature_98**",
+    await query.message.edit(f"**കഥകളുടെ യൂട്യൂബ് ലിങ്കുകൾ അയച്ചു തരു..**\n **കീ:** /start \n\n🏅**@signature_98** ",
                         reply_markup=InlineKeyboardMarkup(button))

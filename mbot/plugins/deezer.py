@@ -45,7 +45,7 @@ async def link_handler(_, message):
             randomdir = f"/tmp/{str(randint(1,100000000))}"
             mkdir(randomdir)
             for song in songs:
-                PForCopy = await message.reply_photo(song.get('cover'),caption=f"🎧 Title : `{song['name']}`\n🎤 Artist : `{song['artist']}`\n💽 Album : `{song['album']}`\n💽 Song Number : `{song['playlist_num']}`")
+                PForCopy = await message.reply_photo(song.get('cover'),caption=f"🎧 Title : `{song['name']}`\n🎤 Artist : `{song['artist']}`\n\n **@malayalam_audiobook**")
                 path = await download_songs(song,randomdir)
                 thumbnail = await thumb_down(song.get('thumb'),song.get('name'))
                 AForCopy = await message.reply_audio(path,performer=song.get('artist'),title=f"{song.get('name')} - {song.get('artist')}",caption=f"[{song['name']}](https://www.deezer.com/track/{song['deezer_id']}) | {song['album']} - {song['artist']}",thumb=thumbnail,duration=song['duration'])
